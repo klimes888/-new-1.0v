@@ -1,0 +1,116 @@
+main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+container {}
+
+#col_content {
+    padding: 70px 40px;
+
+}
+.hidden {
+    display: none !important;
+}
+/*     컬럼 레이아웃     */
+#columns {
+    column-gap: 10px;
+    column-width: 230px;
+}
+
+#columns figure {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#columns figcaption {
+    background: #fff;
+    margin-bottom: 2px;
+    padding: 5px;
+    border: 1px solid #fff;
+    letter-spacing: -0.5px;
+}
+
+
+/*     컬럼 작품 번역자 bar    */
+#columns .fi_hd {
+    display: flex;
+    align-items: center;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 2px;
+}
+
+#columns .fi_hd .glob_ic {
+    background: url(../img/globe.png) no-repeat center/cover;
+    padding: 3%;
+    margin-right: 5px;
+}
+
+#columns .fi_hd .trans_id {}
+
+/*     컬럼 작품 썸네일     */
+#columns figure .main_img {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+#columns .main_img .main_thumb {
+    background: url(../img/main_img/1.png) no-repeat center/cover;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#columns .menu_dot {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: url(../img/menu_dot.png) no-repeat center;
+    width: 22px;
+    height: 8px;
+}
+
+#columns .menu_dot:hover {
+    background: #2222;
+}
+
+/* 컬럼 작품 작가 bar */
+#columns .fi_bo {
+    display: flex;
+    padding: 4px;
+    align-items: center;
+}
+
+#columns .fi_bo .uplo_ic {
+    background: url(../img/wrt2.png) no-repeat center/cover;
+    padding: 3%;
+
+}
+
+/*     작품 제목     */
+#columns .fi_scr {
+    padding: 6px;
+    border-radius: 0 0 6px 6px;
+}
+
+/*     글자 공통     */
+#columns figcaption span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+#columns .fi_scr span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: var(--black-color);
+    letter-spacing: -1px;
+    line-height: 19px;
+    font-size: 14px;
+}
+

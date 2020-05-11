@@ -1,0 +1,58 @@
+/* 웹 표준 ir 기법*/
+.ir {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+header {
+    background: #fff;
+}
+
+section {
+    background: #F7F7F7;
+    width: 100%;
+    height: 100%;
+}
+
+/*      햄버거 버튼     */
+.dot_wrap {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.dot_wrap:hover {
+    background: var(--hover-color);
+}
+/*  소형   */
+.dot1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/dot-2-1.png) no-repeat center/cover;
+    width: 26px;
+    height: 26px;
+}
+
+/*  중형   */
+.dot2 {}
+
+/*      색상 변수     */
+:root {
+    --orange-color: rgba(241, 173, 57, 0.8);
+    --orange0-color: rgba(241, 173, 57, 0.5);
+    --black-color: rgba(34, 34, 34, 0.8);
+    --gray-color: rgba(247, 247, 247);
+    --text-color: rgba(164, 159, 186);
+    --hover-color: rgba(151, 151, 151, 0.3);
+    --red-color: rgba(247, 112, 143);
+    --sky-color: rgba(73,173,239);
+}
+

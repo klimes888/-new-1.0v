@@ -1,0 +1,832 @@
+/*  공통   */
+
+/* 프로필 상단*/
+.info_common {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.bar_magin {
+    margin-bottom: 3px;
+}
+
+/* 레이아웃 */
+.box_container {
+    display: flex;
+    padding-top: 55px;
+}
+
+.contents_box {
+    width: calc(100% - 380px);
+    height: 100%;
+    background: #2222;
+}
+
+.comm_box {
+    position: fixed;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-x: scroll;
+    overflow-x: hidden;
+    top: 55px;
+    right: 5px;
+    width: 360px;
+    height: 100%;
+    background: #F7F7F7;
+}
+
+.comm_box::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+}
+
+.comm_contain {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin-bottom: 3px;
+    padding: 14px;
+
+
+}
+
+.user_comm_box {
+    width: 360px;
+    max-height: 800px;
+    height: 100%;
+    color: #fff;
+}
+
+.bar_contain {
+    display: flex;
+    width: 360px;
+    height: auto;
+    background: #fff;
+}
+
+
+.feed_group_box {
+    width: 360px;
+    height: auto;
+}
+
+/*     콘텐츠 작품 컨테이너     */
+.art_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.art_container img {
+    width: auto;
+    height: 100vh;
+}
+
+/*     댓글 컨테이너     */
+.comm_container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 250px;
+
+}
+
+/*     댓글 컨테이너 >> 원작자 댓글란     */
+.origin_user_comm {}
+
+.origin_inform {}
+
+.origin_inform i {
+    margin-left: 16px;
+    margin-top: 2px;
+    background: url(../img/wrt2.png) no-repeat center/cover;
+    width: 14px;
+    height: 12px;
+}
+
+.origin_inform span {
+    margin-left: 2px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+.origin_user_pf {
+    position: relative;
+    display: flex;
+}
+
+.origin_user_pf .user_pf_icon {
+
+    background: url(../img/twitter2.png) no-repeat center/cover;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+/*     댓글 컨테이너 >> 유저 프로필 란    */
+.user_pf_box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+    margin-bottom: 18px;
+}
+
+.user_pf_box_up {
+    display: flex;
+    margin: 3px 0;
+}
+
+.user_pf_box_up .user_nick {
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+}
+
+.user_pf_box_up .user_nick a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.user_pf_box_up .vw_fw_btn {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-top: 2px;
+
+}
+
+.dot_wrap {
+    top: -6px;
+    right: -5px;
+}
+
+.user_pf_box_down {}
+
+.user_id {
+    display: inline-block;
+    max-width: 210px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user_id a {
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+/*    댓글 컨테이너 >> 작품 제목      */
+.art_title {
+    font-size: 14px;
+    margin: 0 40px 3px 8px;
+    color: var(--black-color);
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.up_load_time {
+    margin: 0 0 6px 10px;
+    font-size: 13px;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+/*     댓글 컨테이너 >> 원작품 썸네일     */
+.origin_art_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 340px;
+    height: auto;
+    max-height: 160px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    overflow: hidden;
+
+}
+
+.origin_art_wrap img {
+    width: 100%;
+    height: auto;
+}
+
+/*         번역자 작품란     */
+/* origin 클래스와 병용하고 있음 */
+.trans_user_comm {
+    flex-direction: column;
+    margin-bottom: 3px;
+
+}
+
+/*  번역자 작품란 >> 상단 프로필     */
+.trans_inform {}
+
+.trans_inform i {
+    margin-left: 16px;
+    margin-top: 2px;
+    background: url(../img/globe.png) no-repeat center/cover;
+    width: 14px;
+    height: 14px;
+
+}
+
+.trans_inform span {
+    margin-left: 2px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+.vw_fw_btn.fwing {
+    color: var(--orange-color);
+    font-weight: 500;
+}
+
+/*     번역자 작품란 >>  작품 텍스트 내용     */
+.txt_contents {
+    font-size: 14px;
+    margin: 0 40px 10px 8px;
+    color: var(--black-color);
+    line-height: 20px;
+    font-weight: 400;
+
+}
+
+/*      번역자 작품란 >>  반응 bar     */
+.react_box {
+    display: flex;
+    padding: 10px 14px;
+}
+
+.react_box i {
+    background: url(../img/reacting.png) no-repeat center/ cover;
+    width: 12px;
+    height: 14px;
+    margin: 3px 8px 0 0;
+}
+
+.react_box span a {
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+/*      번역자 작품란 >>  반응 버튼 bar     */
+.act_box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 3px;
+}
+
+.act_box span {
+    font-size: 14px;
+    margin-left: 5px;
+    color: var(--text-color);
+}
+
+.act_box .bmk_btn i {
+    float: left;
+    background: url(../img/bookmark-1.png) no-repeat center / cover;
+    width: 15px;
+    height: 17px;
+}
+
+.act_box .like_btn i {
+    float: left;
+    background: url(../img/heart-1.png) no-repeat center / cover;
+    width: 18px;
+    height: 16px;
+
+}
+
+.act_box .share_btn i {
+    float: left;
+    background: url(../img/share-1.png) no-repeat center / cover;
+    width: 16px;
+    height: 18px;
+
+}
+
+.act_box .trans_btn i {
+    float: left;
+    background: url(../img/globe-1.png) no-repeat center / cover;
+    width: 18px;
+    height: 18px;
+
+}
+
+/*     피드백 bar     */
+
+.comm_inform_box {
+    display: flex;
+    padding: 10px 14px;
+}
+
+.comm_inform_box i {
+    background: url(../img/comment-dots-1.png) no-repeat center / cover;
+    width: 16px;
+    height: 14px;
+    margin-right: 8px;
+}
+
+.comm_inform_box span {
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+/*     피드백 (댓글달기)     */
+.feed_wrap {
+    width: 100%;
+    height: auto;
+}
+
+.feed_box {
+    display: flex;
+    align-items: center;
+    width: 360px;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.feed_box input {
+    width: calc(100% - 50px);
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black-color);
+    margin: 0 8px;
+    border-radius: 25px;
+}
+
+.feed_box input::placeholder {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.feed_box button {
+    background: url(../img/paper-plane.png) no-repeat center / cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/*     그룹 피드백란     */
+
+.user_comm_box_wrap {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--orange-color);
+    box-sizing: border-box;
+}
+
+.fd_from {
+    margin: 0 16px 10px 20px;
+}
+
+.up_load_time.fd_comm {
+    margin: 0 0 14px 22px;
+}
+
+.feed_act_box {
+    display: flex;
+    align-items: center;
+}
+
+.fd_comm_btn {
+    flex-basis: 120px;
+    margin-left: 20px;
+}
+
+.fd_comm_btn i {
+    float: left;
+    background: url(../img/comment-dots.png) no-repeat center / cover;
+    width: 20px;
+    height: 18px;
+}
+
+.fd_comm_btn span,
+.fd_like_btn span {
+    color: var(--text-color);
+    font-size: 14px;
+    margin-left: 7px;
+}
+
+.fd_like_btn {}
+
+.fd_like_btn i {
+    float: left;
+    background: url(../img/heart-1.png) no-repeat center / cover;
+    width: 18px;
+    height: 16px;
+}
+
+/* 일반 단대댓글(그룹 피드백이 아닌 것) */
+
+/*     피드백 더보기     */
+.feed_more {
+    width: 100%;
+    height: 36px;
+}
+
+.feed_more a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.feed_more span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/*     모바일일 경우 바뀌는 클래스     */
+.unvisible {
+    display: none;
+}
+
+/*     뷰어 모달 (공통은 건드리지 말 것 - 차후 다른 페이지 모달과 병합)    */
+/*     공통     */
+.modal {
+    margin: 0 auto;
+    display: flex;
+    /*        display: none;*/
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.modal-box {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding-bottom: 36px;
+}
+
+/* 모달 레이아웃  */
+
+.md_react {
+/*    display: none;*/
+    max-width: 480px;
+    width: 100%;
+}
+
+.modal-box.md_user_op {
+    display: none;
+    max-width: 360px;
+    width: 100%;
+
+}
+
+.modal-box.md_tran_op {
+    display: none;
+    max-width: 360px;
+    width: 100%;
+}
+
+.modal-box.md_share {
+        display: none;
+    max-width: 480px;
+    width: 100%;
+
+}
+
+/* 모달 내부 쓸 내용(공통) */
+.modal-box-inner {
+    background: var(--gray-color);
+    border-radius: 8px;
+}
+
+.modal-box-inner .send_btn {
+    background: var(--orange-color);
+    margin-top: 20px;
+}
+
+/*모달 내용*/
+/*     옵션 팝업     */
+.md_user_op .modal_title h3 {padding-left: 22px;}
+.md_set {
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 3px;
+    background: #fff;
+}
+
+.md_set a {
+    width: 100%;
+    height: 100%;
+}
+
+.md_set span {
+    color: var(--black-color);
+    margin-left: 28px;
+}
+
+.md_set a:hover {
+    background: #F7F7F7;
+}
+
+.md_set.modal_title {
+    height: 42px;
+    border-radius: 8px 8px 0 0;
+}
+
+.md_set.modal_title h3 {
+    margin-left: 8px;
+}
+
+/*     리크릿 (번역하기 )    */
+.md_tran_op .modal_title h3 {
+    margin-left: 30px;
+}
+/*     반응 팝업     */
+.md_react .mobile_md_del {
+    display: none;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    padding: 5%;
+    margin-left: 8px;
+}
+
+.md_react .mobile_md_del i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/pass.png) no-repeat center / cover;
+    width: 11px;
+    height: 18px;
+
+}
+
+.modal_title .react_ic {
+    background: url(../img/reacting.png) no-repeat center/cover;
+    width: 11px;
+    height: 14px;
+    margin: 3px 0 0 30px;
+}
+
+.art_share {
+    width: 100%;
+    height: 420px;
+    margin-bottom: 3px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-x: scroll;
+    overflow-x: hidden;
+}
+
+.art_share::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+}
+
+.react_set {
+    padding: 10px 20px;
+    background: #fff;
+    margin-bottom: 3px;
+}
+
+.share_icon {
+    position: relative;
+    background: url(../img/icon-b.png) no-repeat center/cover;
+    min-width: 42px;
+    width: 42px;
+    height: 42px;
+    margin-right: 8px;
+}
+
+.share_icon i {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    background: url(../img/share-3.png) no-repeat center/cover;
+    width: 21px;
+    height: 22px;
+}
+
+.md_pf_box .user_nick {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.md_pf_box .share_txt {
+    margin-right: 12px;
+    font-size: 15px;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.md_pf_box .react_time {
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+/* 공유하기 팝업*/
+.md_share .modal_title i {
+    background: url(../img/share-2.png) no-repeat center /cover;
+    width: 16px;
+    height: 18px;
+    margin-left: 26px;
+}
+
+.share_tab_wrap {
+    width: 100%;
+    height: auto;
+}
+.md_set.link_tab a {
+    display: flex;
+    align-items: center;
+}
+.md_set.link_tab i {
+    margin-left: 20px;
+    background: url(../img/link.png) no-repeat center / cover;
+    width: 24px;height: 24px;
+}
+.md_set.link_tab span {margin-left: 8px;font-weight: 700;font-size: 16px;}
+
+.share_tab{
+        display: flex;
+    align-items: center;
+   height: 66px;
+    background: #fff;
+    padding-left: 16px;
+}
+
+.twit_ic a,
+.tumb_ic a,
+.pinter_ic a {
+    float: left;
+    position: relative;
+    padding: 23px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+.share_tab_wrap a:hover {
+    background: var(--orange-color);
+}
+
+.twit_ic i,
+.tumb_ic i,
+.pinter_ic i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    float: left;
+}
+
+.twit_ic i {
+    background: url(../img/twitter-logo.png) no-repeat center / cover;
+}
+
+.tumb_ic i {
+    background: url(../img/Pinterest-logo.png) no-repeat center / cover;
+}
+
+.pinter_ic i {
+    background: url(../img/tumblr-logo.png) no-repeat center / cover;
+}
+
+/* 모달 닫기 버튼(공통) */
+.modal-box-del {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background: var(--gray-color);
+    border-radius: 0 0 8px 8px;
+}
+
+.modal-box-del a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box-del span {
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+
+/*     태블릿&모바일 ~ 1080px    */
+@media screen and (max-width: 1000px) {
+
+    /*    콘텐츠 레이아웃     */
+    .contents_box {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 3px;
+    }
+
+    .art_container {}
+
+    .art_container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*     댓글(피드백)레이아웃*/
+    .comm_box {
+        position: flex;
+        top: 55px;
+        right: 0px;
+        width: 100%;
+    }
+
+    .feed_box {
+        width: 100%;
+    }
+
+    .user_comm_box {
+        width: 100%;
+    }
+
+    .bar_contain {
+        width: 100%;
+    }
+
+    .feed_group_box {
+        width: 100%;
+    }
+
+    .contents_box {
+        display: none;
+    }
+
+    .unvisible {
+        display: block;
+    }
+
+    /*     댓글 내부 콘텐츠     */
+    .origin_art_wrap {
+        max-width: 100%;
+    }
+
+}
+
+/*     모바일 ~ 480px    */
+@media screen and (max-width: 480px) {
+
+    /*    반응 팝업용    */
+    .art_share {
+        width: 100%;
+        height: calc(100vh - 85px);
+    }
+
+    .art_share .react_set {
+        padding: 10px 6px;
+    }
+
+    .md_set.modal_title {
+        height: 46px;
+        border-radius: 0 0 0 0;
+    }
+
+    .md_react {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .md_react .mobile_md_del {
+        display: block;
+    }
+
+    .modal_title .react_ic {
+        margin: 3px 0 0 14px;
+    }
+
+}

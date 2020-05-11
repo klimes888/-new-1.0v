@@ -1,0 +1,312 @@
+/* 레이아웃 */
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.container_box{margin: 10px;}
+
+.section_left {
+    background: #2222;
+    flex: 2 0 0;
+}
+
+.section_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #9999;
+    flex: 1.5 0 0;
+}
+
+.log-sign {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    height: 560px;
+    background: #fff;
+    box-shadow: 2px 2px 2px 1.3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+/*     공통     */
+input {
+    width: calc(100% - 10px);
+    height: 42px;
+    border: 2px solid var(--text-color);
+    opacity: 0.7;
+    border-radius: 8px;
+    margin: 4px 0px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-color);
+    padding-left: 5px;
+}
+
+.logform {
+    width: 100%;
+    height: 42px;
+    border-radius: 25px;
+    margin: 2px 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*     로그인 화면 박스     */
+.login_box {
+    display: none;
+/*    display: flex;*/
+}
+
+/*     아이콘     */
+.logo_ic {
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+}
+
+.logo_ic i {
+    background: url(../img/logo.png) no-repeat center/cover;
+    width: 48px;
+    height: 48px;
+}
+
+.logo_ic h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 8px;
+    color: var(--text-color);
+}
+
+/*     로그인 입력 폼     */
+.login_box input {}
+
+.login_box input::placeholder {}
+
+/*     로그인 정보 찾기     */
+
+.info_src span {
+    font-size: 13px;
+    letter-spacing: -1px;
+    color: #E16902;
+    border-bottom: 1px solid;
+}
+
+/*     로그인 버튼     */
+.login_btn_form {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+    margin: 30px 0 20px 0;
+}
+
+.login-button {
+    background: #49ADEF;
+    opacity: 0.8;
+}
+
+.sign_up-button {
+    background: var(--orange-color);
+
+}
+
+/*     sns 로그인 폼     */
+.agree_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agree_form h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.google-button {
+    color: #fff;
+    background: #E44F46;
+    margin: 16px 0;
+}
+
+/*     약관 정보     */
+.agree_form span {
+    text-align: center;
+    font-size: 13px;
+    margin: 0 25px;
+    line-height: 22px;
+}
+
+.agree_form span a {
+    border-bottom: 1px solid;
+    font-weight: 700;
+    color: #F7708F;
+}
+
+/*     회원가입 폼     */
+.sign_up_box {
+    display: flex;
+/*    display: none;*/
+}
+
+.sign_up_box input {
+    margin-bottom: 10px;
+}
+
+.sign_up_box .sign_up_tit {
+    margin: 30px 0 20px 10px;
+}
+
+.sign_up_box .sign_up_tit span {
+    font-size: 13px;
+    color: var(--black-color);
+}
+
+.sign_up_box .sign_up_tit h2 {
+    color: var(--black-color);
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* 회원가입 약관 동의하기 */
+.sign_up_box .agree_txt_form {
+    text-align: center;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.sign_up_box .agree_txt_form a {
+    border-bottom: 1px solid;
+    font-weight: 700;
+    color: var(--red-color);
+
+}
+
+/* 회원가입 및 동의 버튼 */
+.signup_btn_form {
+    display: flex;
+    margin: 30px 0 10px 0;
+}
+
+.agree_btn {
+    border: 2px solid var(--red-color);
+    color: var(--red-color);
+    margin-right: 15px;
+}
+
+.agree_btn.clicked {
+    background: var(--red-color);
+    color: #fff;
+}
+
+.signup_btn {
+    background: var(--orange-color);
+}
+
+/*     API 회원가입 (로그인 폼과 동일)    */
+
+/*     임시 비밀번호 모달      */
+.modal {
+    margin: 0 auto;
+        display: flex;
+/*    display: none;*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.modal-box {
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    height: 240px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal-box-inner h2 {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 30px 0 20px 20px;
+}
+
+.modal-box-inner .send_btn {
+    background: var(--orange-color);
+    margin-top: 20px;
+}
+
+.modal-box-del {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background: var(--gray-color);
+    border-radius: 0 0 8px 8px;
+}
+
+.modal-box-del a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box-del span {
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/*     인증 메일 모달     */
+.certi_send {
+    display: none;
+    position: relative;
+    height: 300px;
+}
+
+.certi_send h2 {
+    margin: 30px 10px;
+    font-size: 15px;
+}
+
+.certi_send span {
+    line-height: 25px;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.certi_send span:nth-child(4) {
+    margin-bottom: 50px;
+}
+
+.Certi_confirm_btn {
+    background: var(--orange-color)
+}
+
+
+/*     미디어 쿼리 ~ 1024px    */
+@media screen and (max-width: 1024px) {
+    .section_left {
+        display: none;
+    }
+
+}

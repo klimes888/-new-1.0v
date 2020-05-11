@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/modal.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/login.css" type="text/css">
+
+</head>
+
+<body>
+    <wrap>
+        <main>
+            <div class="container">
+                <section class="section_left">
+                    <div class="bg_main_img">
+                        <figure></figure>
+                    </div>
+                </section>
+                <!--                로그인측 화면     -->
+                <section class="section_right">
+                    <div class="log-sign">
+                      <div class="login_box">
+                       <div class="container_box">
+                        <div class="logo_ic"><i class=""></i>
+                            <h2>"welcome to Epiclogue"</h2>
+                        </div>
+                        <form action="">
+                            <input type="text" placeholder="이메일/아이디" class="id_form">
+                            <input type="password" placeholder="비밀번호 입력" class="pw_form">
+                            <div class="info_src">
+                                <a href=""><span>혹시 로그인 정보를 잃어버리셨나요?</span></a></div>
+                            <div class="login_btn_form">
+                                <button class="logform login-button">로그인</button>
+                                <button class="logform sign_up-button">회원가입</button> </div>
+                        </form>
+                        <div class="agree_form">
+                            <h3>SNS Login</h3>
+                            <button class="logform google-button">+ google</button>
+                            <span>SNS 로그인을 하시면 <a href="">이용약관</a>및 <a href="">개인정보 취급방침</a>에 동의하는 것으로 간주됩니다.</span>
+                        </div>
+                        </div>
+                        </div>
+<!--                         // 로그인 화면 끝 -->
+                                           <!--                   회원가입 화면     -->
+
+                        <div class="sign_up_box">
+                       <div class="container_box">
+                        <div class="sign_up_tit">
+                            <span>창작이 즐거워지는 공간</span>
+                            <h2>나만의 계정 만들기!</h2>
+                            <a href="#" class="sign_md_back"><i></i></a>
+                        </div>
+                        <form action="">
+                            <input type="text" placeholder="이메일" class="email_form">
+                            <input type="text" placeholder="비밀번호" class="pw_form">
+                            <input type="text" placeholder="비밀번호 확인" class="pw_confirm_form">
+                            <input type="text" placeholder="닉네임" class="nick_form">
+                            <span class="agree_txt_form">에픽로그 <a href="#">이용약관</a> 및 <a href="#">개인정보 취급방침</a> 동의여부</span>
+                            <div class="signup_btn_form">
+                                <button class="logform agree_btn">동의하기</button>
+                                <button class="logform signup_btn">가입하기</button>
+                            </div>
+                            <button class="logform google-button">+ google 로 계속하기</button>
+                        </form>
+                        <!--                        // 회원가입 화면 끝     -->
+                        </div>
+                        </div>
+                    </div>
+                    <!--                            인증메일 확인 모달 화면 -->
+                    <div class="log-sign certi_send">
+                       <div class="container_box">
+                        <h2>창작이 즐거워지는 세계를 약속할게요!</h2>
+                        <span>가입하신 이메일로 인증 요청을 시도했어요</span>
+                        <span>발송 된 메일의 링크를 클릭하시면</span>
+                        <span>에픽로그의 당당한 일원이 된답니다.</span>
+                        <button class="logform Certi_confirm_btn">메일 확인하기</button>
+                        <div class="modal-box-del">
+                            <a href="#"><span>닫기</span></a>
+                        </div>
+                        </div>
+
+                        <!--                       // 인증메일 확인 모달 화면 끝     -->
+                    </div>
+
+                </section>
+
+                <div class="modal">
+                    <div class="modal-box">
+                        <div class="modal-box-inner">
+                            <form action="">
+                                <h2>가입했던 메일로 임시 비밀번호 보내드려요!</h2>
+                                <input type="text" placeholder="이메일" class="email_form">
+                                <button class="logform send_btn">발송하기</button>
+                            </form>
+                        </div>
+                        <div class="modal-box-del">
+                            <a href="#"><span>닫기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </wrap>
+</body></html>
