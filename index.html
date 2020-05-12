@@ -108,36 +108,86 @@
                 <div class="dm_box">
                     <form action="">
                         <div class="dm_all_wrap">
-                            <div class="dm_pf_hd">
+                            <!--                            DM 헤더 -->
+                            <!--             DM 헤더>>      DM 일반 헤더-->
+                            <div class="dm_origin_hd hidden">
+                                <div class="dm_hd_orig_wrap">
+                                    <span>쪽지 보내기</span>
+                                </div>
+
+                                <div class="dm_hd_close_wrap">
+                                    <a href="#"><i></i></a>
+                                </div>
+                            </div>
+
+                            <!--               DM 헤더>>    DM 유저 닉네임 헤더-->
+                            <div class="dm_pf_hd hidden">
                                 <div class="dm_hd_ic_wrap">
                                     <a href="#"><i></i></a>
                                 </div>
                                 <div class="dm_hd_txt_wrap">
-                                    <span class="dm_user_nick">dasasdsdasdasdasda</span><span class="dm_fix_txt">님의 메시지</span>
+                                    <span class="dm_user_nick">dasasdsdsdsdsdsdsdsdsssdasda</span><span class="dm_fix_txt">님의 메시지</span>
                                 </div>
                             </div>
+                            <!--                          DM 헤더>>  DM 유저 옵션헤더 -->
+
+                            <div class="dm_opt_hd">
+                                <div class="dm_hd_ic_wrap">
+                                    <a href="#"><i></i></a>
+                                </div>
+                                <div class="dm_hd_txt_wrap">
+                                    <span class="dm_user_nick">@dasasdsdsdsdsssdasda</span><span class="dm_fix_txt">님 옵션</span>
+                                </div>
+                            </div>
+                            <!--                            DM 메인창-->
                             <div class="dm_screen_wrap">
-                                <div class="txt_bg">
+                                <!--             DM 메인창>>  DM 유저 목록창-->
+                                <div class="user_dm_list_box hidden">
+                                    <div class="user_dm_list">
+                                        <div class="dm_list_lf"><a href="#"><i></i></a></div>
+                                        <a href="#" class="dm_list_cent">
+                                            <div class="user_id_wrap">
+                                                <div class="user_id_box"><span class="dm_user_id">@dawegwgwgegdf</span>
+                                                    <span class="dm_list_time">1시간</span>
+                                                </div>
+                                            </div>
+                                            <span class="user_txt_prev">안녕하세요 테sddsdsd스sdsdsdssssda트 합니다.</span>
+                                        </a>
+                                        <div class="dm_list_rit"><a href="#" class="dot_wrap"><i class="dot1"></i></a></div>
+                                    </div>
+                                </div>
+                                <!--                               DM 햄버거 옵션 목록창  -->
+                                <div class="dm_opt_box">
+                                    <div class="opt_set opt_list_flw"><a href="#"><span>팔로우하기</span></a></div>
+                                    <div class="opt_set opt_list_del"><a href="#"><span>메시지 삭제하기</span></a></div>
+                                    <div class="opt_set opt_list_repo"><a href="#"><span>신고하기</span></a></div>
+                                    <div class="opt_set opt_list_mute"><a href="#"><span>뮤트하기</span></a></div>
+                                </div>
+                                <!--                               -->
+                                <!--            DM 메인창>>      DM 유저 대화창-->
+
+                                <div class="txt_bg hidden">
                                     <div class="user_txt_box">
                                         <span class="user_txt_time">2013.12.01 10:10</span>
                                         <div class="user_txt_bub">
                                             <span>테스트를 좀 해보겠습니닼ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋasdasdaㅋㅋㅋㅋㅋㅋㅋㅋ</span></div>
                                     </div>
-                                    
                                     <div class="my_txt_box">
                                         <span class="my_txt_time">2013.12.01 10:10</span>
                                         <div class="my_txt_bub">
                                             <span>테ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋa</span></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="dm_input_wrap">
-                                <div class="dm_input_outter">
-                                    <input type="text" class="dm_txt_input">
-                                    <button class="dm_txt_btn"></button>
+                                <!--                                DM 입력창     -->
+                                <div class="dm_input_wrap hidden">
+                                    <div class="dm_input_outter">
+                                        <input type="text" class="dm_txt_input">
+                                        <button class="dm_txt_btn"></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -171,7 +221,6 @@
                                     <figcaption class="fi_scr"><span>(ฅ•ω•ฅ)♡그림을 그려 보았읍니다.. 지대한 관심 감사드립니다🤩🤩글자테</span></figcaption>
                                 </a>
                             </figure>
-
                         </div>
                     </div>
                 </div>

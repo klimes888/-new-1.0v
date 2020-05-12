@@ -622,45 +622,86 @@
     background: var(--gray-color);
 }
 
-/* dm 헤더 */
-.dm_pf_hd {
+/* dm 헤더(공통) */
+.dm_pf_hd,
+.dm_origin_hd,
+.dm_opt_hd {
     display: flex;
-    align-items: center;
     width: 100%;
     height: auto;
     background: #fff;
     margin-bottom: 2px;
 }
 
-.dm_pf_hd {
-    padding: 8px 0;
-}
-
-.dm_hd_ic_wrap a {
-    float: left;
+.dm_hd_ic_wrap a,
+.dm_hd_close_wrap a {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    margin-left: 10px;
 
 }
 
-.dm_hd_ic_wrap i {
+.dm_hd_ic_wrap i,
+.dm_hd_close_wrap i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+}
+
+.dm_hd_txt_wrap,
+.dm_hd_orig_wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* dm 일반 헤더*/
+.dm_origin_hd {}
+
+.dm_hd_orig_wrap {
+    margin-left: 20px;
+}
+
+.dm_hd_orig_wrap span {
+    font-size: 16px;
+    color: var(--black-color)
+}
+
+.dm_hd_close_wrap {}
+
+.dm_hd_close_wrap a {
+    float: right;
+}
+
+.dm_hd_close_wrap i {
+    background: url(../img/X-mark.png) no-repeat center;
+    width: 20px;
+    height: 20px;
+}
+
+/* dm 유저 헤더*/
+
+.dm_pf_hd,
+dm_opt_hd {
+    align-items: center;
+}
+
+.dm_hd_ic_wrap a {
+    float: left;
+    margin-left: 10px;
+}
+
+.dm_hd_ic_wrap i {
     background: url(../img/arrow-left.png) no-repeat center / cover;
     width: 10px;
     height: 18px;
-    margin-right: 18px;
 }
 
 .dm_hd_txt_wrap {
-    display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .dm_hd_txt_wrap span {
@@ -673,23 +714,28 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding-left: 8px;
+    padding: 0 6px 0 3px;
 }
 
 .dm_hd_txt_wrap .dm_fix_txt {
     white-space: nowrap;
-    padding-right: 50px;
+    padding-right: 70px;
 }
 
-/* dm 본문 내용*/
+/*  DM 옵션 헤더  */
+.dm_opt_hd {
+    /* 유저 헤더와 공유 */
+}
+
+/* dm 본문 내용(공통)*/
 
 .dm_screen_wrap {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: calc(100% - 50px);
+    height: 100%;
     background: #fff;
-    margin-bottom: 3px;
-        -ms-overflow-style: none;
+    -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
@@ -703,49 +749,176 @@
     /* Chrome, Safari, Opera*/
 }
 
+/*  유저 목록창  */
+.user_dm_list_box,
+.dm_opt_box {
+    width: 100%;
+    height: 100%;
+    background: var(--gray-color)
+}
+
+.user_dm_list,
+.opt_set {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    background: #fff;
+    margin-bottom: 3px;
+}
+
+.dm_list_lf {
+    display: flex;
+    margin-left: 8px;
+}
+
+.dm_list_lf a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.dm_list_lf a i {
+    float: left;
+    background: url(../img/pf_ic.png) no-repeat center / cover;
+    width: 42px;
+    height: 42px;
+}
+
+.dm_list_cent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 4px;
+}
+
+.user_id_wrap {}
+
+.user_id_wrap .user_id_box {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+.dm_list_cent .user_txt_prev {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.user_id_box {
+    display: flex;
+    width: 100%;
+}
+
+.dm_user_id,
+.user_txt_prev {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dm_user_id {
+    padding-right: 30px;
+}
+
+.user_txt_prev {
+    padding-right: 100px;
+}
+
+.dm_list_time {
+    float: right;
+    padding-right: 100px;
+    white-space: nowrap;
+}
+
+.dm_list_rit {}
+
+.dm_list_rit .dot_wrap {
+    top: 8px;
+    /*common에 absolute 있음*/
+    right: 2px;
+}
+
+.dm_list_rit .dot1 {}
+
+
+/*   DM 옵션 목록창  */
+.dm_opt_box {}
+
+.opt_set a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.opt_set a:hover {
+    background: var(--hover-color);
+}
+
+.opt_set a span {
+    margin-left: 22px;
+    font-size: 15px;
+    color: var(--black-color);
+}
+
+/*  유저 대화창  */
 .txt_bg {
     width: auto;
     height: auto;
     padding: 15px 14px;
 }
-.user_txt_box, .my_txt_box {
+
+.user_txt_box,
+.my_txt_box {
     display: flex;
     flex-direction: column;
 
 }
-.user_txt_time, .my_txt_time {
+
+.user_txt_time,
+.my_txt_time {
     font-size: 13px;
     font-weight: 300;
     color: var(--text-color);
     margin-left: 8px;
 }
-.my_txt_time{
-    flex:none;
+
+.my_txt_time {
+    flex: none;
     margin-left: auto;
     margin-top: 10px;
     margin-right: 10px;
 }
 
-.user_txt_bub, .my_txt_bub {
+.user_txt_bub,
+.my_txt_bub {
     max-width: 240px;
     min-width: 50px;
     height: auto;
     margin: 4px 0 10px 0;
-    background: var(--hover-color);
     padding: 12px;
-    border-radius: 12px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
 }
 
 .my_txt_bub {
-    flex:none;
-    background: var(--orange0-color);
+    flex: none;
     margin-left: auto;
+    border-color: var(--orange0-color);
 }
-.user_txt_bub span, .my_txt_bub span {
+
+.user_txt_bub span,
+.my_txt_bub span {
     font-size: 14px;
     font-weight: 300;
     color: var(--black-color)
-
 }
 
 /* dm 텍스트 입력*/
@@ -753,7 +926,7 @@
     display: flex;
     align-items: center;
     height: 48px;
-    background: #fff;
+    margin-top: auto;
 }
 
 .dm_input_outter {
@@ -763,13 +936,13 @@
     height: 35px;
     background: var(--gray-color);
     border-radius: 25px;
-    padding: 0 16px;
+    padding: 0 14px;
     margin: 0 10px;
 }
 
 .dm_txt_input {
     width: 100%;
-    height: 25px;
+    height: 28px;
     margin-right: 3px;
     border-radius: 10px;
 }
@@ -884,11 +1057,12 @@
         box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
         border-radius: 0 0 20px 20px;
     }
-/* dm 모바일용 메시지*/
 
-.dm_all_wrap {
-    width: 100vw;
-    height: calc(100vh - 60px);
-}
+    /* dm 모바일용 메시지*/
+
+    .dm_all_wrap {
+        width: 100vw;
+        height: calc(100vh - 60px);
+    }
 
 }
